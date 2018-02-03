@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.github.automation.tests.GitHubTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testGitHubLoggedInUserCreatingRepositoryAndNewIssue"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.github.automation.tests.GitHubTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.github.automation.tests.GitHubTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testGitHubLoggedInUserCreatingRepositoryAndNewIssue"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.github.automation.tests.GitHubTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
